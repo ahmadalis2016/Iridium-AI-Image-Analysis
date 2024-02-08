@@ -30,7 +30,7 @@ Usage
 
 Upload an image using the file uploader.
 Optionally, provide an input prompt to guide the AI analysis.
-Click the "Tell me about the image" button to receive AI-generated insights.
+Click the "Analyze Image" button to receive AI-generated insights.
 View the AI-generated response below the image.
 Contributors
 Ahmad A Shaik, Ph.D.
