@@ -4,6 +4,10 @@
 Iridium AI: Explore Images with AI Insights
 Iridium AI is a Streamlit web application powered by the Gemini AI model, designed to provide insights on uploaded images through artificial intelligence. With Iridium AI, users can upload images and receive AI-generated descriptions and analyses, offering a deeper understanding of the content within the images.
 
+## Demo App
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]/[(https://iridium-ai-image-analysis.streamlit.app/)]
+
 Features
 AI-Powered Image Analysis: Utilizes the Gemini AI model to generate insights and descriptions for uploaded images.
 User-Friendly Interface: Simple and intuitive Streamlit interface for easy image uploading and result viewing.
