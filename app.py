@@ -19,7 +19,7 @@ if not google_api_key:
 # Try to configure the generative AI model.
 try:
     genai.configure(api_key=google_api_key)
-    model = genai.GenerativeModel('gemini-pro-vision')  # Initialize generative model.
+    model = genai.GenerativeModel('gemini-1.5-flash')  # Initialize generative model.
 except NotFound:
     st.error("The specified Google model was not found. Please check the model name or your API configuration.")
     st.stop()
