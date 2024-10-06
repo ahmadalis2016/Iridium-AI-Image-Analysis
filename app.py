@@ -6,6 +6,7 @@ import textwrap
 from PIL import Image
 import google.generativeai as genai
 from dotenv import load_dotenv
+from google.api_core.exceptions import NotFound  # Import the NotFound exception.
 
 load_dotenv()  # Load environment variables from .env file.
 
@@ -15,10 +16,16 @@ if not google_api_key:
     st.error("Google API key is missing. Please set it in your .env file.")
     st.stop()
 
-genai.configure(api_key=google_api_key)
-
-# Initialize generative model.
-model = genai.GenerativeModel('gemini-pro-vision')
+# Try to configure the generative AI model.
+try:
+    genai.configure(api_key=google_api_key)
+    model = genai.GenerativeModel('gemini-pro-vision')  # Initialize generative model.
+except NotFound:
+    st.error("The specified Google model was not found. Please check the model name or your API configuration.")
+    st.stop()
+except Exception as e:
+    st.error(f"An error occurred: {str(e)}")
+    st.stop()
 
 # Function to get Gemini response.
 def get_gemini_response(input, image):
